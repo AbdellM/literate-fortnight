@@ -1,0 +1,46 @@
+{
+  "cranes": [
+    {
+      "id": 1,
+      "name": "Crane 1",
+      "type": "Tower",
+      "capacity": 100,
+      "location": "New York"
+    },
+    {
+      "id": 2,
+      "name": "Crane 2",
+      "type": "Mobile",
+      "capacity": 50,
+      "location": "Los Angeles"
+    },
+    {
+      "id": 3,
+      "name": "Crane 3",
+      "type": "Crawler",
+      "capacity": 200,
+      "location": "Chicago"
+    },
+    {
+      "id": 4,
+      "name": "Crane 4",
+      "type": "Crawler",
+      "capacity": 200,
+      "location": "Chicago"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "$2b$10$wLFvxiIq4fEFx7xZbUjEGeG6b84BM9TXsWFduiGE0ryhEE9g09Uwi",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "$2b$10$wLFvxiIq4fEFx7xZbUjEGeG6b84BM9TXsWFduiGE0ryhEE9g09Uwi",
+      "isAdmin": false
+    }
+  ]
+}
