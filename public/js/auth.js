@@ -1,6 +1,6 @@
 class Auth {
 	constructor() {
-        document.querySelector("body").style.display = "none";
+		document.querySelector("body").style.display = "none";
 		const token = localStorage.getItem("token");
 		this.validateAuth(token);
 	}
@@ -9,12 +9,13 @@ class Auth {
 		if (!token) {
 			window.location.replace("/");
 		} else {
-            document.querySelector("body").style.display = "block";
+			document.querySelector("body").style.display = "block";
 		}
 	}
 
 	logOut() {
 		localStorage.removeItem("token");
+		localStorage.removeItem("cranes");
 		window.location.replace("/");
 	}
 }

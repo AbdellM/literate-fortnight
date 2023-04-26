@@ -22,10 +22,13 @@ fetch(url, {
         data.forEach(crane => {
             tableHTML += `
             <tr>
-              <td>${crane.name}</td>
-              <td>${crane.capacity}</td>
-              <td>${crane.type}</td>
-              <td>${crane.location}</td>
+            <td>${crane.crane}</td>
+            <td>${crane.frequency}</td>
+            <td>${crane.downTime}</td>
+            <td>${crane.status}</td>
+            <td>${crane.timeToRepair}</td>
+            <td>${crane.comment}</td>
+            <td>${crane.actualState}</td>
             </tr>
           `;
         });

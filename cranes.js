@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const router = express.Router();
 
-const dataFilePath = './data.json';
+const dataFilePath = './db-cranes.json';
 
 // Read all cranes
 router.get('/', (req, res) => {

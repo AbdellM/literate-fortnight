@@ -16,7 +16,7 @@ function generateToken(user) {
 // Define a function to verify JWT token for a user
 function verifyToken(req, res, next) {
   try {
-      const token = req.headers.authorization.split(' ')[1]; // get the token from the Authorization header
+    const token = req.headers.authorization.split(' ')[1]; // get the token from the Authorization header
     const decoded = jwt.verify(token, secretKey);
     req.userData = decoded; // store the decoded user data in the request object for further use
     next(); // call the next middleware function
@@ -40,36 +40,36 @@ async function comparePassword(password, hashedPassword) {
 
 // Define a function to authenticate a user
 async function login(req, res) {
-    // Get the username and password from the request body
-    const { username, password } = req.body;
-  
-    // Check if the username and password are provided
-    if (!username || !password) {
-      return res.status(400).json({ message: 'Username and password are required.' });
-    }
-  
-    // Get the user object from the database (in this case, from the JSON file)
-    const users = require('./data.json').users;
-    const user = users.find(u => u.username === username);
-  
-    // Check if the user exists
-    if (!user) {
-      return res.status(401).json({ message: 'Invalid username or password.' });
-    }
-  
-    // Check if the password is correct
-    const isMatch = await comparePassword(password, user.password);
-    if (!isMatch) {
-      return res.status(401).json({ message: 'Invalid username or password.' });
-    }
-  
-    // Generate a JWT token and send it in the response
-    const token = generateToken(user);
-    res.json({ token });
+  // Get the username and password from the request body
+  const { username, password } = req.body;
 
-    // Log the user in
-    console.log('User logged in:', user);
+  // Check if the username and password are provided
+  if (!username || !password) {
+    return res.status(400).json({ message: 'Username and password are required.' });
   }
+
+  // Get the user object from the database (in this case, from the JSON file)
+  const users = require('./db-user.json').users;
+  const user = users.find(u => u.username === username);
+
+  // Check if the user exists
+  if (!user) {
+    return res.status(401).json({ message: 'Invalid username or password.' });
+  }
+
+  // Check if the password is correct
+  const isMatch = await comparePassword(password, user.password);
+  if (!isMatch) {
+    return res.status(401).json({ message: 'Invalid username or password.' });
+  }
+
+  // Generate a JWT token and send it in the response
+  const token = generateToken(user);
+  res.json({ token });
+
+  // Log the user in
+  console.log('User logged in:', user);
+}
 
 module.exports = {
   generateToken,

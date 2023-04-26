@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/style.min.css">
+  <script defer src="/js/auth.js"></script>
+  <script defer src="/init.js"></script>
+  <script src="./getdata.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Welcome to the Dashboard</h1>
+    <p class="text-center"><a href="#" class="logout">Log Out</a></p>
+    <div class="row">
+      <div class="col-6">
+        <h2>Crane List</h2>
+      </div>
+      <div class="col-6">
+        <button onclick="newCrane()">Add Crane</button>
+      </div>
+      <table id="craneTable">
+        <thead>
+          <tr>
+            <th>Crane</th>
+            <th>Frequency</th>
+            <th>Down Time</th>
+            <th>Status</th>
+            <th>Time To Repair</th>
+            <th>Comment</th>
+            <th>Actual State</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+    </div>
+</body>
+<script src="./editdata.js"></script>
+
+</html>

@@ -1,5 +1,7 @@
 const token = localStorage.getItem('token'); // Get the token from LocalStorage
-const url = 'http://localhost:3000/cranes';
+const url = 'http://localhost:3000/cranes/';
+let cranes = [];
+let isNewCrane = false;
 
 fetch(url, {
     headers: {
@@ -15,17 +17,20 @@ fetch(url, {
         }
     })
     .then(data => {
-        localStorage.setItem("cranes", JSON.stringify(data));
+        cranes = data;
         const tableBody = document.querySelector('#craneTable tbody');
         let tableHTML = '';
 
         data.forEach(crane => {
             tableHTML += `
             <tr class="crane-${crane.id}">
-              <td>${crane.name}</td>
-              <td>${crane.capacity}</td>
-              <td>${crane.type}</td>
-              <td>${crane.location}</td>
+              <td>${crane.crane}</td>
+              <td>${crane.frequency}</td>
+              <td>${crane.downTime}</td>
+              <td>${crane.status}</td>
+              <td>${crane.timeToRepair}</td>
+              <td>${crane.comment}</td>
+              <td>${crane.actualState}</td>
               <td>
                 <button class="edit" onclick="editCrane(${crane.id})" >Edit</button>
               </td>
@@ -34,14 +39,6 @@ fetch(url, {
         });
 
         tableBody.innerHTML = tableHTML;
-
-        const editButtons = document.querySelectorAll('.editBtn');
-        editButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                editCrane(button.dataset.id);
-            });
-        });
-
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);

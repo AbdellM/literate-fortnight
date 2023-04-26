@@ -49,9 +49,9 @@ class Login {
 
 
 							if (isAdmin) {
-								window.location.href = 'admin/admin.html';
+								window.location.href = 'admin/';
 							} else {
-								window.location.href = 'user/user.html';
+								window.location.href = 'user/';
 							}
 							// this.form.submit();
 						}
