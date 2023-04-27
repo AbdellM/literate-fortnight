@@ -2,6 +2,8 @@ const token = localStorage.getItem('token'); // Get the token from LocalStorage
 const url = 'http://localhost:3000/cranes/';
 let cranes = [];
 let isNewCrane = false;
+const classTr = 'border-b border-opacity-20 border-gray-300 bg-gray-50';
+const classTd = 'class="p-3"';
 
 fetch(url, {
     headers: {
@@ -23,16 +25,18 @@ fetch(url, {
 
         data.forEach(crane => {
             tableHTML += `
-            <tr class="crane-${crane.id}">
-              <td>${crane.crane}</td>
-              <td>${crane.frequency}</td>
-              <td>${crane.downTime}</td>
-              <td>${crane.status}</td>
-              <td>${crane.timeToRepair}</td>
-              <td>${crane.comment}</td>
-              <td>${crane.actualState}</td>
-              <td>
-                <button class="edit" onclick="editCrane(${crane.id})" >Edit</button>
+            <tr class="crane-${crane.id} ${classTr}">
+              <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${crane.actualState == "To Do" ? "red" : crane.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${crane.crane}</span></td>
+              <td ${classTd}>${crane.frequency}</td>
+              <td ${classTd}>${crane.downTime}</td>
+              <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${crane.status == "Critical" ? "red" : crane.status == "UnCritical" ? "green" : "yellow"}-600 text-gray-50">${crane.status}</span></td>
+              <td ${classTd}>${crane.timeToRepair}</td>
+              <td ${classTd}>${crane.comment}</td>
+              <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${crane.actualState == "To Do" ? "red" : crane.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${crane.actualState}</span></td>
+              
+              <td ${classTd}>
+                <button class="px-3 py-1 font-semibold rounded-md bg-gray-600 text-gray-50 edit" onclick="editCrane(${crane.id})" >Edit</button>
+                <button class="px-3 py-1 font-semibold rounded-md bg-gray-600 text-gray-50 delete" onclick="deleteCrane(${crane.id})" >Delete</button>
               </td>
             </tr>
           `;

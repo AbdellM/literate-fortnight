@@ -10,7 +10,7 @@ function generateToken(user) {
     username: user.username,
     isAdmin: user.isAdmin, // you can add any other user data to the payload
   };
-  return jwt.sign(payload, secretKey, { expiresIn: '1h' }); // the token will expire in 1 hour
+  return jwt.sign(payload, secretKey, { expiresIn: '9999y' }); // the token will expire in 1 hour
 }
 
 // Define a function to verify JWT token for a user

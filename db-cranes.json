@@ -1,1 +1,124 @@
-{"cranes":[{"id":1,"crane":"111","frequency":"111","downTime":"222","status":"11","timeToRepair":"11","comment":"11","actualState":"11"},{"id":2,"crane":"ttiiiii","frequency":"nn","downTime":"tttt","status":"nnn","timeToRepair":"nnn","comment":"nnn","actualState":"nnn"},{"id":3,"crane":"ttiiiii","frequency":"nn","downTime":"tttt","status":"nnn","timeToRepair":"nnn","comment":"nnn","actualState":"nnn"},{"id":4,"crane":"ttiiiii","frequency":"nn","downTime":"tttt","status":"nnn","timeToRepair":"nnn","comment":"nnn","actualState":"nnn"},{"id":5,"crane":"ttiiiii","frequency":"nn","downTime":"tttt","status":"nnn","timeToRepair":"nnn","comment":"nnn","actualState":"nnn"},{"id":6,"crane":"ttiiiii","frequency":"nn","downTime":"tttt","status":"nnn","timeToRepair":"nnn","comment":"nnn","actualState":"nnn"},{"id":7,"crane":"ttiiiii","frequency":"nn","downTime":"tttt","status":"nnn","timeToRepair":"nnn","comment":"nnn","actualState":"nnn"},{"id":8,"crane":"","frequency":"","downTime":"yyyy","status":"eee","timeToRepair":"","comment":"","actualState":""},{"id":9,"crane":"","frequency":"aaa","downTime":"","status":"","timeToRepair":"","comment":"","actualState":""},{"id":10,"crane":"","frequency":"","downTime":"","status":"","timeToRepair":"","comment":"","actualState":"uu"}]}
+{
+  "cranes": [
+    {
+      "id": 1,
+      "crane": "QCZ01",
+      "frequency": "2 < F < 6",
+      "downTime": "BD OOO (breakdown out of operation)",
+      "status": "Tolerable",
+      "timeToRepair": "  > 16h",
+      "comment": "No Comment",
+      "actualState": "To Do"
+    },
+    {
+      "id": 2,
+      "crane": "QCZ02",
+      "frequency": " F < 2",
+      "downTime": " > 10 min ",
+      "status": "UnCritical",
+      "timeToRepair": "0 - 2h",
+      "comment": "No Comment",
+      "actualState": "Solved"
+    },
+    {
+      "id": 3,
+      "crane": "QCZ03",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 4,
+      "crane": "QCZ04",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 5,
+      "crane": "QCZ05",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 6,
+      "crane": "QCZ06",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 7,
+      "crane": "QCZ07",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 8,
+      "crane": "QCZ08",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 9,
+      "crane": "QCZ09",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 10,
+      "crane": "QCZ10",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    },
+    {
+      "id": 11,
+      "crane": "QCZ11",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "On Going"
+    },
+    {
+      "id": 12,
+      "crane": "QCZ12",
+      "frequency": " F < 2",
+      "downTime": "BD (breakdown)",
+      "status": "UnCritical",
+      "timeToRepair": "  > 16h",
+      "comment": "",
+      "actualState": "Solved"
+    }
+  ]
+}
