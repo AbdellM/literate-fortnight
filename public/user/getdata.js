@@ -24,13 +24,13 @@ fetch(url, {
         data.forEach(crane => {
             tableHTML += `
             <tr ${classTr}>
-                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${crane.actualState == "To Do" ? "red" : crane.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${crane.crane}</span></td>
+                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${crane.actualState == "Solved" ? "green" : crane.status == "Critical" ? "red" : crane.status == "UnCritical" ? "lime" : "yellow"}-600 text-gray-50">${crane.crane}</span></td>
                 <td ${classTd}>${crane.frequency}</td>
                 <td ${classTd}>${crane.downTime}</td>
-                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${crane.status == "Critical" ? "red" : crane.status == "UnCritical" ? "green" : "yellow"}-600 text-gray-50">${crane.status}</span></td>
+                <td ${classTd}>${crane.status}</td>
                 <td ${classTd}>${crane.timeToRepair}</td>
                 <td ${classTd}>${crane.comment}</td>
-                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${crane.actualState == "To Do" ? "red" : crane.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${crane.actualState}</span></td>
+                <td ${classTd}>${crane.actualState}</td>
             </tr>
           `;
         });

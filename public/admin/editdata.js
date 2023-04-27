@@ -82,13 +82,13 @@ function updateCrane(id) {
 
             crane.innerHTML = `
             <tr class="crane-${data.id} ${classTr}">
-                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.actualState == "To Do" ? "red" : data.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${data.crane}</span></td>
+                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.actualState == "Solved" ? "green" : data.status == "Critical" ? "red" : data.status == "UnCritical" ? "lime" : "yellow"}-600 text-gray-50">${data.crane}</span></td>
                 <td ${classTd}>${data.frequency}</td>
                 <td ${classTd}>${data.downTime}</td>
-                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.status == "Critical" ? "red" : data.status == "UnCritical" ? "green" : "yellow"}-600 text-gray-50">${data.status}</span></td>
+                <td ${classTd}>${data.status}</td>
                 <td ${classTd}>${data.timeToRepair}</td>
                 <td ${classTd}>${data.comment}</td>
-                <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.actualState == "To Do" ? "red" : data.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${data.actualState}</span></td>
+                <td ${classTd}>${data.actualState}</td>
                 <td ${classTd}>
                     <button class="px-3 py-1 font-semibold rounded-md bg-gray-600 text-gray-50 edit" onclick="editCrane(${data.id})" >Edit</button>
                     <button class="px-3 py-1 font-semibold rounded-md bg-gray-600 text-gray-50 delete" onclick="deleteCrane(${data.id})" >Delete</button>
@@ -185,13 +185,13 @@ function saveCrane() {
 
             crane.innerHTML = `
         <tr class="crane-${data.id}">
-            <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.actualState == "To Do" ? "red" : data.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${data.crane}</span></td>
+            <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.actualState == "Solved" ? "green" : data.status == "Critical" ? "red" : data.status == "UnCritical" ? "lime" : "yellow"}-600 text-gray-50">${data.crane}</span></td>
             <td ${classTd}>${data.frequency}</td>
             <td ${classTd}>${data.downTime}</td>
-            <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.status == "Critical" ? "red" : data.status == "UnCritical" ? "green" : "yellow"}-600 text-gray-50">${data.status}</span></td>
+            <td ${classTd}>${data.status}</td>
             <td ${classTd}>${data.timeToRepair}</td>
             <td ${classTd}>${data.comment}</td>
-            <td ${classTd}><span class="p-1 font-semibold rounded-md bg-${data.actualState == "To Do" ? "red" : data.actualState == "Solved" ? "green" : "yellow"}-600 text-gray-50">${data.actualState}</span></td>
+            <td ${classTd}>${data.actualState}</td>
             <td ${classTd}>
                 <button class="px-3 py-1 font-semibold rounded-md bg-gray-600 text-gray-50 edit" onclick="editCrane(${data.id})" >Edit</button>
                 <button class="px-3 py-1 font-semibold rounded-md bg-gray-600 text-gray-50 delete" onclick="deleteCrane(${data.id})" >Delete</button>
